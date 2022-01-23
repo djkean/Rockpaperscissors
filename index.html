@@ -7,16 +7,26 @@
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
+        <h1>Rock, Paper, Scissors!</h1>
+        <h5> 
+            <div id="playervscomputer">Game Result:</div> 
+            <div id="computerChoice"></div>
+            <div id="gameResult"></div>
+            <div id="winsandlosses">
+                <p>Wins: 
+                    <span id="gameWins"> </span> Losses:
+                    <span id="gameLosses"></span>
+                </p>
+            </div>
+        </h5>
+            <br><script src="rps.js"></script>
         <p>
-            <label for="rock"><input value="Rock" type="radio" name="rock-paper-scissors">Rock</label>
-            <label for="paper"><input value="Paper" type="radio" name="rock-paper-scissors">Paper</label>
-            <label for="scissors"><input value="Scissors" type="radio" name="rock-paper-scissors">Scissors</label>
-            <button id="btn">OK</button>
+            <span class="flex-options">
+                <img src="images/rock.png" onclick="playerChoice('Rock');" width="196" height="196" alt="button and picture of a rock">
+                <img src="images/paper.png" onclick="playerChoice('Paper');" width="196" height="196" alt="button and picture of paper">
+                <img src="images/scissors.png" onclick="playerChoice('Scissors');" width="196" height="196" alt="button and picture of scissors">
+            </span>    
         </p>
-    <div id="computerChoice"></div>
-    <div id="gameResult"></div>
-    <p>Wins: <span id="gameWins"></span></p>
-    <p>Losses: <span id="gameLosses"></span></p>
-    <script src="rps.js"></script>
+        <br>
     </body>
 </html>

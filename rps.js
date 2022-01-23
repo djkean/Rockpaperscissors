@@ -7,10 +7,11 @@ const btn = document.getElementById("btn");
 /* this is using the logic from the color flipper as the system
 the way we will have our "computer" pick randomly from rock, paper or scissors */
 
-btn.addEventListener("click", function() {
+
+function playerChoice(rpsSelect) {
     const randomChoiceIndex = getRandomNumber();
     const computerChoice = choice[randomChoiceIndex];
-    console.log("Computer Chose:", computerChoice);
+    console.log("Computer Chose:", computerChoice); 
 
 /* this is where we are declaring a variable for our HTML to read for the computer's choice */
 
@@ -21,18 +22,8 @@ btn.addEventListener("click", function() {
 /* we are using radio inputs for the buttons, one for each value
 for the player's choice */
 
-    const getChoicesFromHTML = document.getElementsByName("rock-paper-scissors");
-    console.log(getChoicesFromHTML);
+    let playerChoice = rpsSelect;
 
-    let playerChoice;
-
-    for (let i = 0; i < getChoicesFromHTML.length; i++)
-    {
-       if (getChoicesFromHTML[i].checked)
-        { 
-            playerChoice = getChoicesFromHTML[i].value;
-        }
-    }
     console.log("Player Choice", playerChoice);
     let gameResult;
     
@@ -40,27 +31,32 @@ for the player's choice */
 
     if (playerChoice == computerChoice)
     {
+        document.getElementById("gameResult").style.background= "#6199E9";
         gameResult = "Tie";
     } 
     else if (playerChoice == "Rock" && computerChoice != "Paper")
     {
+        document.getElementById("gameResult").style.background= "#5FB679";
         gameResult = "Rock beats Scissors, You Win!";
         gameWins ++;
         localStorage.setItem("games won", gameWins);
     }
     else if (playerChoice == "Paper" && computerChoice != "Scissors")
     {
+        document.getElementById("gameResult").style.background= "#5FB679";
         gameResult = "Paper beats Rock, You Win!";
         gameWins ++;
         localStorage.setItem("games won", gameWins);
     }
     else if (playerChoice == "Scissors" && computerChoice != "Rock")
     {
+        document.getElementById("gameResult").style.background= "#5FB679";
         gameResult = "Scissors beats Paper, You Win!";
         gameWins ++;
         localStorage.setItem("games won", gameWins);
     }
     else {
+        document.getElementById("gameResult").style.background= "#B0280F";
         gameResult = "You Lose :(";
         gameLosses ++;
         localStorage.setItem("games lost", gameLosses);
@@ -77,7 +73,7 @@ for the player's choice */
     const lossCount = document.getElementById("gameLosses");
     lossCount.textContent = gameLosses;
     console.log(gameLosses);
-});
+}
 
 window.onload = function()
 {

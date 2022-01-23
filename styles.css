@@ -1,0 +1,40 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 300%;
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+
+}
+
+body {
+    background-color: rgb(29, 63, 126);
+}
+
+#playervscomputer {
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 125%;
+}
+
+.flex-options {
+    display: flex;
+    justify-content: space-between;
+    background:rgb(29, 63, 126);
+}
+ 
+.flex-options img {
+    border: 2px solid rgb(12, 29, 59);
+}
+
+label {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    color: rgb(175, 176, 202);
+}
