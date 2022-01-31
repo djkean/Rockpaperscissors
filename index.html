@@ -8,25 +8,30 @@
     </head>
     <body>
         <h1>Rock, Paper, Scissors!</h1>
-        <h5> 
+        <h2> 
             <div id="playervscomputer">Game Result:</div> 
             <div id="computerChoice"></div>
-            <div id="gameResult"></div>
+            <span id="gameResult"></span>
             <div id="winsandlosses">
                 <p>Wins: 
                     <span id="gameWins"> </span> Losses:
                     <span id="gameLosses"></span>
                 </p>
             </div>
-        </h5>
-            <br><script src="rps.js"></script>
+        </h2>
         <p>
             <span class="flex-options">
-                <img src="images/rock.png" onclick="playerChoice('Rock');" width="196" height="196" alt="button and picture of a rock">
-                <img src="images/paper.png" onclick="playerChoice('Paper');" width="196" height="196" alt="button and picture of paper">
-                <img src="images/scissors.png" onclick="playerChoice('Scissors');" width="196" height="196" alt="button and picture of scissors">
+                <button onclick="playerChoice('Rock');">
+                    <img src="images/rock.png" width="196" height="196" alt="button and picture of a rock">
+                </button>
+                <button onclick="playerChoice('Paper');">
+                    <img src="images/paper.png" width="196" height="196" alt="button and picture of paper">
+                </button>
+                <button onclick="playerChoice('Scissors');">
+                    <img src="images/scissors.png" width="196" height="196" alt="button and picture of scissors">
+                </button>
             </span>    
         </p>
-        <br>
+        <br><script src="rps.js"></script>
     </body>
 </html>
