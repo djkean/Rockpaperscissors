@@ -18,9 +18,9 @@ body{
 }
 
 #playervscomputer {
-text-align: center;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 125%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 125%;
 }
 
 .flex-options {
@@ -35,12 +35,34 @@ font-size: 125%;
     border: 2px solid rgb(12, 29, 59);
 }
 
+#parentOutcomeImage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0; 
+    top: 0;
+    background-color: rgb(22, 65, 121);
+    flex-direction: column;
+}
+
+.outcomeImage {
+    display: none;
+}
+
 img {
     transition: all 0.2s ease;
 }
 
-img:hover {
-transform: scale(0.9);
+button:hover {
+    transform: scale(0.9);
+}
+
+#replayButton {
+    width: 200px;
+    height: 125px;
 }
 
 @media screen and (min-width: 280px) and (max-width: 650px) {

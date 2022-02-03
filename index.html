@@ -8,19 +8,8 @@
     </head>
     <body>
         <h1>Rock, Paper, Scissors!</h1>
-        <h2> 
-            <div id="playervscomputer">Game Result:</div> 
-            <div id="computerChoice"></div>
-            <span id="gameResult"></span>
-            <div id="winsandlosses">
-                <p>Wins: 
-                    <span id="gameWins"> </span> Losses:
-                    <span id="gameLosses"></span>
-                </p>
-            </div>
-        </h2>
         <p>
-            <span class="flex-options">
+            <div class="flex-options">
                 <button onclick="playerChoice('Rock');">
                     <img src="images/rock.png" width="196" height="196" alt="button and picture of a rock">
                 </button>
@@ -30,8 +19,33 @@
                 <button onclick="playerChoice('Scissors');">
                     <img src="images/scissors.png" width="196" height="196" alt="button and picture of scissors">
                 </button>
-            </span>    
+            </div>    
         </p>
-        <br><script src="rps.js"></script>
+        <div id="parentOutcomeImage">
+            <h2> 
+                <div id="playervscomputer">Game Result:</div> 
+                <div id="computerChoice"></div>
+                <span id="gameResult"></span>
+                <div id="winsandlosses">
+                    <p>
+                        Wins: 
+                        <span id="gameWins"> </span> 
+                        Losses:
+                        <span id="gameLosses"></span>
+                    </p>
+                </div>
+            </h2>
+            <div class="outcomeImage" id="RockTie"><img src="images/RockTie.png" width="196" height="196" alt="Two Rocks stare at each other in a stalemate"></div>
+            <div class="outcomeImage" id="PaperTie"><img src="images/PaperTie.png" width="196" height="196" alt="Two pieces of Paper leaf each other alone"></div>
+            <div class="outcomeImage" id="ScissorsTie"><img src="images/ScissorsTie.png" width="196" height="196" alt="Two scissors cut their losses and don't attack"></div>
+            <div class="outcomeImage" id="rockbeatsscissorsWin"><img src="images/rockbeatsscissorsWin.png" width="196" height="196" alt="Your Rock destroys the Scissors"></div>
+            <div class="outcomeImage" id="rockbeatsscissorsLoss"><img src="images/rockbeatsscissorsLoss.png" width="196" height="196" alt="The opponent's Rock smashes your Scissors"></div>
+            <div class="outcomeImage" id="paperbeatsrockWin"><img src="images/paperbeatsrockWin.png" width="196" height="196" alt="Your Paper abducts the Rock"></div>
+            <div class="outcomeImage" id="paperbeatsrockLoss"><img src="images/paperbeatsrockLoss.png" width="196" height="196" alt="The opponent's Paper erases your Rock from history"></div>
+            <div class="outcomeImage" id="scissorsbeatspaperWin"><img src="images/scissorsbeatpaperWin.png" width="196" height="196" alt="Your Scissors chop the Paper to bits"></div>
+            <div class="outcomeImage" id="scissorsbeatspaperLoss"><img src="images/scissorsbeatpaperLoss.png" width="196" height="196" alt="The opponent's Scissors reduce your Paper to nothing"></div>
+            <button id="replayButton">Play Again</button>
+        </div>
+        <script src="rps.js"></script>
     </body>
 </html>
