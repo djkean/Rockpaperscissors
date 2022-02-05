@@ -24,6 +24,12 @@ const gameData = {
     },
 };
 
+const colors = {
+    win: "#5FB679",
+    tie: "#6199E9",
+    lose: "#B0280F",
+};
+
 const choice = ["Rock", "Paper", "Scissors"];
 const btn = document.getElementById("btn");
 
@@ -46,14 +52,14 @@ then wins/losses are set in localstorage */
 
     if (playerChoice == computerChoice)
     {
-        document.getElementById("gameResult").style.background= "#6199E9";
+        document.getElementById("gameResult").style.background= colors.tie;
         document.getElementById(playerChoice + "Tie").style.display= "block";
         document.getElementById("parentOutcomeImage").style.display= "flex";
         gameResult = "Tie";
     } 
     else if (playerChoice == "Rock" && computerChoice != "Paper")
     {
-        document.getElementById("gameResult").style.background= "#5FB679";
+        document.getElementById("gameResult").style.background= colors.win;
         document.getElementById("rockbeatsscissorsWin").style.display= "block";
         document.getElementById("parentOutcomeImage").style.display= "flex";
         gameResult = "Rock beats Scissors, You Win!";
@@ -61,7 +67,7 @@ then wins/losses are set in localstorage */
     }
     else if (playerChoice == "Paper" && computerChoice != "Scissors")
     {
-        document.getElementById("gameResult").style.background= "#5FB679";
+        document.getElementById("gameResult").style.background= colors.win;
         document.getElementById("paperbeatsrockWin").style.display= "block";
         document.getElementById("parentOutcomeImage").style.display= "flex";
         gameResult = "Paper beats Rock, You Win!";
@@ -69,7 +75,7 @@ then wins/losses are set in localstorage */
     }
     else if (playerChoice == "Scissors" && computerChoice != "Rock")
     {
-        document.getElementById("gameResult").style.background= "#5FB679";
+        document.getElementById("gameResult").style.background= colors.win;
         document.getElementById("scissorsbeatspaperWin").style.display= "block";
         document.getElementById("parentOutcomeImage").style.display= "flex";
         gameResult = "Scissors beats Paper, You Win!";
@@ -77,7 +83,7 @@ then wins/losses are set in localstorage */
     }
     else if (playerChoice == "Rock" && computerChoice == "Paper")
     {
-        document.getElementById("gameResult").style.background= "#B0280F";
+        document.getElementById("gameResult").style.background= colors.lose;
         document.getElementById("paperbeatsrockLoss").style.display= "block";
         document.getElementById("parentOutcomeImage").style.display= "flex";
         gameResult = "Paper beats Rock, You Lose! :(";
@@ -85,14 +91,14 @@ then wins/losses are set in localstorage */
     }
     else if (playerChoice == "Paper" && computerChoice == "Scissors")
     {
-        document.getElementById("gameResult").style.background= "#B0280F";
+        document.getElementById("gameResult").style.background= colors.lose;
         document.getElementById("scissorsbeatspaperLoss").style.display= "block";
         document.getElementById("parentOutcomeImage").style.display= "flex";
         gameResult = "Scissors beats Paper, You Lose :(";
         gameData.addLoss();
     }
     else {
-        document.getElementById("gameResult").style.background= "#B0280F";
+        document.getElementById("gameResult").style.background= colors.lose;
         document.getElementById("rockbeatsscissorsLoss").style.display= "block";
         document.getElementById("parentOutcomeImage").style.display= "flex";
         gameResult = "Rock beats Scissors, You Lose :(";
@@ -114,15 +120,9 @@ then wins/losses are set in localstorage */
 
 document.getElementById("replayButton").addEventListener("click", () => {
     document.getElementById("parentOutcomeImage").style.display= "none";
-    document.getElementById("rockbeatsscissorsWin").style.display= "none";
-    document.getElementById("rockbeatsscissorsLoss").style.display= "none";
-    document.getElementById("paperbeatsrockWin").style.display= "none";
-    document.getElementById("paperbeatsrockLoss").style.display= "none";
-    document.getElementById("scissorsbeatspaperWin").style.display= "none";
-    document.getElementById("scissorsbeatspaperLoss").style.display= "none";
-    document.getElementById("RockTie").style.display= "none";
-    document.getElementById("PaperTie").style.display= "none";
-    document.getElementById("ScissorsTie").style.display= "none";
+    Array.from(document.getElementsByClassName('outcomeImage')).forEach((elm) => {
+        elm.style.display = 'none';
+    });
 });
 
 window.onload = function()
