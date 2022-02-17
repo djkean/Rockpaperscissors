@@ -57,7 +57,7 @@ then wins/losses are set in localstorage */
         document.getElementById("parentOutcomeImage").style.display= "flex";
         gameResult = "Tie";
     } 
-    else if (playerChoice == "Rock" && computerChoice != "Paper")
+    else if (playerChoice == "Rock" && computerChoice == "Scissors")
     {
         document.getElementById("gameResult").style.background= colors.win;
         document.getElementById("rockbeatsscissorsWin").style.display= "block";
@@ -65,7 +65,7 @@ then wins/losses are set in localstorage */
         gameResult = "Rock beats Scissors, You Win!";
         gameData.addWin();
     }
-    else if (playerChoice == "Paper" && computerChoice != "Scissors")
+    else if (playerChoice == "Paper" && computerChoice == "Rock")
     {
         document.getElementById("gameResult").style.background= colors.win;
         document.getElementById("paperbeatsrockWin").style.display= "block";
@@ -73,7 +73,7 @@ then wins/losses are set in localstorage */
         gameResult = "Paper beats Rock, You Win!";
         gameData.addWin();
     }
-    else if (playerChoice == "Scissors" && computerChoice != "Rock")
+    else if (playerChoice == "Scissors" && computerChoice == "Paper")
     {
         document.getElementById("gameResult").style.background= colors.win;
         document.getElementById("scissorsbeatspaperWin").style.display= "block";
