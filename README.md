@@ -1,8 +1,10 @@
 # Rockpaperscissors
 
-https://djkean.github.io/Rockpaperscissors/
+## [Check it out here!](https://djkean.github.io/Rockpaperscissors/)
 
-A simple Player vs Computer creation of the timeless rock, paper, scissors game & the project that acted as the introduction to the basics of js.
+ A classic game that served as a great and fun introduction to coding - my first project. 
+ Play against the computer and enjoy some ~~awful~~ very high quality pictures I created for this project!
+
 This project is currently considered "completed"
 
-This project was part of my learning experience with [Get Coding](https://www.get-coding.ca).
+This was part of my learning experience with [Get Coding](https://www.get-coding.ca).
